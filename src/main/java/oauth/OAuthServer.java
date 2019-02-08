@@ -106,7 +106,7 @@ public  class OAuthServer {
         bootstrap.setOption("child.keepAlive", true);
         bootstrap.setOption("child.soLinger", -1);
 
-       // bootstrap.bind(new InetSocketAddress(host, port));
+        bootstrap.bind(new InetSocketAddress(8888));
         log.info("ApiFest OAuth 2.0 Server started at " + host + ":" + port);
     }
 
