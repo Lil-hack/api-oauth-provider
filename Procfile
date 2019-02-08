@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/mmbu-timesheets -Dhttp.port=$PORT
+web: -Dhttp.port=$PORT
