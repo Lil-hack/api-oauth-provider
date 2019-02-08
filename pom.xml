@@ -58,11 +58,7 @@
   </build>
 
   <dependencies>
-    <dependency>
-      <groupId>com.apifest</groupId>
-      <artifactId>apifest-oauth20-api</artifactId>
-      <version>0.2.1</version>
-    </dependency>
+
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty</artifactId>
