@@ -1,1 +1,1 @@
-web: java -jar target/apifest.jar $JAVA_OPTS -Dserver.port=$PORT -cp
+web: java -jar target/apifest.jar -Dhttp.port=$PORT
