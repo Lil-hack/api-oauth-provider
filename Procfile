@@ -1,1 +1,1 @@
-web: -Dhttp.port=$PORT
+web: --port $PORT
