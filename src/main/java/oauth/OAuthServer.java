@@ -27,6 +27,8 @@ import org.jboss.netty.handler.codec.http.HttpRequestDecoder;
 import org.jboss.netty.handler.codec.http.HttpResponseEncoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -41,7 +43,8 @@ import java.util.concurrent.Executors;
  *
  * @author Rossitsa Borissova
  */
-public final class OAuthServer {
+@SpringBootApplication
+public  class OAuthServer {
 
     protected static final Integer DEFAULT_APIFEST_OAUTH_PORT = 8080;
     protected static final String DEFAULT_APIFEST_OAUTH_HOST = "localhost";
@@ -73,10 +76,10 @@ public final class OAuthServer {
 
     static Logger log = LoggerFactory.getLogger(OAuthServer.class);
 
-    private OAuthServer() {
-    }
+
 
     public static void main(String[] args) {
+        SpringApplication.run(OAuthServer.class, args);
         if (!loadConfig()) {
             System.exit(1);
         }
@@ -103,7 +106,7 @@ public final class OAuthServer {
         bootstrap.setOption("child.keepAlive", true);
         bootstrap.setOption("child.soLinger", -1);
 
-        bootstrap.bind(new InetSocketAddress(host, port));
+       // bootstrap.bind(new InetSocketAddress(host, port));
         log.info("ApiFest OAuth 2.0 Server started at " + host + ":" + port);
     }
 

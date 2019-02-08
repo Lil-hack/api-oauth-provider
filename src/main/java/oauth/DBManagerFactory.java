@@ -19,7 +19,7 @@
  */
 package oauth;
 
-import oauth.persistence.cassandra.CassandraDBManager;
+
 import oauth.persistence.hazelcast.HazelcastDBManager;
 import oauth.persistence.redis.RedisDBManager;
 
@@ -40,7 +40,7 @@ public class DBManagerFactory {
             } else if (MONGO_DB.equalsIgnoreCase(OAuthServer.getDatabase())) {
                 dbManager = new MongoDBManager();
             } else if (CASSANDRA_DB.equalsIgnoreCase(OAuthServer.getDatabase())) {
-                dbManager = new CassandraDBManager(OAuthServer.getCassandraContactPoints());
+           //     dbManager = new CassandraDBManager(OAuthServer.getCassandraContactPoints());
             } else {
                 dbManager = new HazelcastDBManager();
             }

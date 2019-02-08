@@ -93,11 +93,7 @@
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.datastax.cassandra</groupId>
-            <artifactId>cassandra-driver-core</artifactId>
-            <version>3.1.0</version>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.google/gson -->
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
