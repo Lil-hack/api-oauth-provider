@@ -43,8 +43,8 @@ import java.util.concurrent.Executors;
  *
  * @author Rossitsa Borissova
  */
-@SpringBootApplication
-public  class OAuthServer {
+//@SpringBootApplication
+public  final class OAuthServer {
 
     protected static final Integer DEFAULT_APIFEST_OAUTH_PORT = 8080;
     protected static final String DEFAULT_APIFEST_OAUTH_HOST = "localhost";
@@ -79,7 +79,7 @@ public  class OAuthServer {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(OAuthServer.class, args);
+      //  SpringApplication.run(OAuthServer.class, args);
         if (!loadConfig()) {
             System.exit(1);
         }
@@ -106,7 +106,7 @@ public  class OAuthServer {
         bootstrap.setOption("child.keepAlive", true);
         bootstrap.setOption("child.soLinger", -1);
 
-        bootstrap.bind(new InetSocketAddress(8888));
+        bootstrap.bind(new InetSocketAddress(8080));
         log.info("ApiFest OAuth 2.0 Server started at " + host + ":" + port);
     }
 
