@@ -51,7 +51,7 @@ import api.IUserAuthentication;
 public final class OAuthServer {
 
     protected static final Integer DEFAULT_APIFEST_OAUTH_PORT = 80;
-    protected static final String DEFAULT_APIFEST_OAUTH_HOST = "ec2-18-195-210-158.eu-central-1.compute.amazonaws.com";
+    protected static final String DEFAULT_APIFEST_OAUTH_HOST = "api-oauth20.herokuapp.com";
     protected static final String DEFAULT_HAZELCAST_PASS = "dev-pass";
 
     private static String customJar;
