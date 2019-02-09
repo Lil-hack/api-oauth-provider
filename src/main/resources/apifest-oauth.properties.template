@@ -1,5 +1,5 @@
 oauth20.host=false
-oauth20.port=false
+oauth20.port=8090
 oauth20.database=false
 db_uri=false
 redis.sentinels=false
